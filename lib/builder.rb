@@ -1,3 +1,6 @@
+require 'question'
+require 'answer'
+
 class Builder
     def parse(file_name)
         questions = []
