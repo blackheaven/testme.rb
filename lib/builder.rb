@@ -1,7 +1,12 @@
 require 'question'
-require 'answer'
+require 'answer/factory'
 
 class Builder
+
+    def initialize(factory = nil)
+        @factory = factory || Answer::Factory.new
+    end
+
     def parse(file_name)
         questions = []
         File.open file_name do |infile|
@@ -21,6 +26,6 @@ class Builder
         is_correct = !line.match(/^\s+\+/).nil?
         normalized_answer = line.strip
         normalized_answer[0] = '' if is_correct
-        Answer.new(normalized_answer, is_correct)
+        @factory.create(normalized_answer, is_correct)
     end
 end
