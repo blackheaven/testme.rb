@@ -5,4 +5,11 @@ class Question
         @title = title
         @answers = []
     end
+
+    def correct?
+        @answers.each do |a|
+            return false if !a.correct?
+        end
+        true
+    end
 end
