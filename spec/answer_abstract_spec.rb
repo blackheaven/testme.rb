@@ -4,6 +4,7 @@ describe Answer::Abstract, '#initialize' do
     it 'create an abstract answer' do
         a = Answer::Abstract.new('T')
         a.title.should eq('T')
+        a.answer.should eq(false)
     end
 end
 
@@ -13,4 +14,3 @@ describe Answer::Abstract, '#correct?' do
         expect { a.correct? }.to raise_error(RuntimeError, "Virtual function 'Answer::Abstract' called")
     end
 end
-

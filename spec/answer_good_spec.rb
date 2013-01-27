@@ -3,6 +3,7 @@ require 'answer/good'
 describe Answer::Good, '#initialize' do
     it 'create an abstract answer' do
         a = Answer::Good.new('T')
+        a.answer.should eq(false)
         a.title.should eq('T')
     end
 end
