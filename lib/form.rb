@@ -11,11 +11,9 @@ class Form
         @questions[i]
     end
 
-    def correct_questions
-        i = 0
-        @questions.each do |q|
-            i.next if q.correct?
+    def wrong_questions
+        @questions.select do |q|
+            !q.correct?
         end
-        i
     end
 end
