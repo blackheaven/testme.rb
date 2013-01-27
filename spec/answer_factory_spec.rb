@@ -8,7 +8,7 @@ describe Answer::Factory, '#create' do
         a.instance_of?(Answer::Good).should eq(true)
     end
 
-    it 'create a Bad answer' do
+    it 'create a bad answer' do
         a = Answer::Factory.new.create('T', false)
         a.title.should eq('T')
         a.choice.should eq(false)

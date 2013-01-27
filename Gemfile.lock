@@ -45,3 +45,4 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   rspec
+  rspec-mocks
