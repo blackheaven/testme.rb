@@ -1,9 +1,9 @@
-require 'answer/abstract'
+require "#{File.dirname(__FILE__)}/abstract"
 
 module Answer
     class Bad < Abstract
-        def correct?(answer)
-            !answer
+        def correct?
+            !@answer
         end
     end
 end

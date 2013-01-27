@@ -10,13 +10,11 @@ end
 describe Answer::Good, '#correct?' do
     it 'return true if the answer is true' do
         a = Answer::Good.new('T')
-        a.answer = true
-        a.correct?.should eq(true)
+        a.correct?.should eq(false)
     end
 
     it 'return false if the answer is false' do
         a = Answer::Good.new('T')
-        a.answer = false
         a.correct?.should eq(false)
     end
 end

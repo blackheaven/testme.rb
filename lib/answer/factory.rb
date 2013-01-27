@@ -1,5 +1,5 @@
-require 'answer/good'
-require 'answer/bad'
+require "#{File.dirname(__FILE__)}/good"
+require "#{File.dirname(__FILE__)}/bad"
 
 module Answer
     class Factory

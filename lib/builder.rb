@@ -1,5 +1,5 @@
-require 'question'
-require 'answer/factory'
+require "#{File.dirname(__FILE__)}/question"
+require "#{File.dirname(__FILE__)}/answer/factory"
 
 class Builder
 

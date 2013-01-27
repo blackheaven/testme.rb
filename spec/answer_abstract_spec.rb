@@ -10,7 +10,7 @@ end
 describe Answer::Abstract, '#correct?' do
     it 'throw an exception' do
         a = Answer::Abstract.new('T')
-        expect { a.correct?(true) }.to raise_error(RuntimeError, "Virtual function 'Answer::Abstract' called")
+        expect { a.correct? }.to raise_error(RuntimeError, "Virtual function 'Answer::Abstract' called")
     end
 end
 
