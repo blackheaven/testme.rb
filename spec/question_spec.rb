@@ -14,7 +14,7 @@ describe Question, '#initialize' do
         q.answers << Answer::Bad.new('A')
         q.answers << Answer::Bad.new('B')
         q.answers << Answer::Bad.new('C')
-        q.answers.size.should eq(2)
+        q.answers.size.should eq(3)
     end
 end
 
