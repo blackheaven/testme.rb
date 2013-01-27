@@ -1,10 +1,10 @@
 module Answer
     class Abstract
         attr_reader :title
-        attr_accessor :answer
+        attr_accessor :choice
         def initialize(title)
             @title = title
-            @answer = false
+            @choice = false
         end
 
         def correct?

@@ -1,9 +1,20 @@
 class Question
     attr_reader :title
-    attr_accessor :answers
-    def initialize(title)
+    def initialize(title, answers)
         @title = title
-        @answers = []
+        @answers = answers || []
+    end
+
+    def size
+        @answers.size
+    end
+
+    def [](i)
+        @answers[i]
+    end
+
+    def []=(i, v)
+        @answers[i].choice = v
     end
 
     def correct?

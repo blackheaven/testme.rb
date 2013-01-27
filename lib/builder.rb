@@ -1,3 +1,4 @@
+require "#{File.dirname(__FILE__)}/form"
 require "#{File.dirname(__FILE__)}/question"
 require "#{File.dirname(__FILE__)}/answer/factory"
 
@@ -10,15 +11,19 @@ class Builder
     def parse(file_name)
         questions = []
         File.open file_name do |infile|
+            title = ''
+            answers = []
             while (line = infile.gets)
                 if line.match /^\s+/
-                    questions.last.answers << parse_answer(line)
+                    answers << parse_answer(line)
                 else
-                    questions << Question.new(line.strip)
+                    title = line.strip
+                    answers = []
+                    questions << Question.new(title, answers)
                 end
             end
         end
-        questions
+        Form.new(questions)
     end
 
     private

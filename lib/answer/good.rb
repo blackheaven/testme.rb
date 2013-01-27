@@ -3,7 +3,7 @@ require "#{File.dirname(__FILE__)}/abstract"
 module Answer
     class Good < Abstract
         def correct?
-            @answer
+            @choice
         end
     end
 end
