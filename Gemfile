@@ -8,4 +8,5 @@ group :development do
     gem 'rb-inotify'
     gem 'rb-fsevent', :require => false
     gem 'rb-fchange', :require => false
+    gem 'simplecov'
 end
